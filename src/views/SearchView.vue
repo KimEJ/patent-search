@@ -1,6 +1,5 @@
 <template>
   <div class="search">
-    <h1>search result</h1>
     {{data}}
   </div>
 </template>
@@ -16,9 +15,12 @@ export default {
   },
 
   mounted() {
+    let uri = window.location.search.substring(1); 
+    let params = new URLSearchParams(uri);
+    
     axios.get("http://lod.kipo.kr/data/search/endpoint", {
       params: {
-        searchKeyword: this.$route.query.token,
+        searchKeyword: params.get("token"),
         contextStr: 'patent',
         currentPage: 1,
         displayNum: 10,
