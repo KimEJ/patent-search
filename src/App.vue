@@ -11,9 +11,9 @@ import HelloWorld from './components/HelloWorld.vue'
       <HelloWorld msg="특허검색엔진" />
 
       <nav style="font-size: small;">
-        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/home">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/search">Search</RouterLink>
+        <RouterLink to="/">Search</RouterLink>
       </nav>
     </div>
   </header>

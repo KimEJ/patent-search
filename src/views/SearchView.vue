@@ -18,7 +18,7 @@ export default {
     let uri = window.location.search.substring(1); 
     let params = new URLSearchParams(uri);
     
-    axios.get("https://cors-anywhere.herokuapp.com/http://lod.kipo.kr/data/search/endpoint", {
+    axios.get("http://lod.kipo.kr/data/search/endpoint", {
       params: {
         searchKeyword: params.get("token"),
         contextStr: 'patent',
